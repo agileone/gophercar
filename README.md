@@ -10,23 +10,21 @@ Gophercar is a DIY platform for self-driving miniature cars like Donkeycar ([htt
 
 ## Car and Controller Hardware
 
-- Exceed Short Course Truck (https://www.amazon.com/Exceed-Racing-Desert-Course-2-4ghz/dp/9269802094)
-- Donkeycar chassis kit(https://squareup.com/store/donkeycar/item/desert-monster-short-course-truck-or-blaze-partial-kit)
-- Raspberry Pi 3 Model B+
-- Raspberry Pi wide-angle camera (included in Donkeycar kit)
-- PCA9685 I2C servo driver (included in Donkeycar kit)
-- SSD1306 I2C OLED display (optional)
-- MPU6050 I2C Accelerometer/Gyroscope (optional)
+- Hobby King Rattler (ESC + rf radio)
+- Beagleboard Blue
+- Logitech C270 web camera
+- NO PCA9685 I2C servo driver (included in Donkeycar kit)
+- no SSD1306 I2C OLED display (optional)
+- no MPU6050 I2C Accelerometer/Gyroscope (optional)
 
 ## Car OS Software
 
-The following needs to be installed on a bootable SD card for the Raspi:
+The following needs to be installed on a bootable SD card for the BBlue:
 
-- Raspbian Stretch OS
+- Debian 9.0 OS image (https://debian.beagleboard.org/images/bone-debian-9.9-lxqt-armhf-2019-08-03-4gb.img.xz)
 - Go v1.10+
 - OpenCV 3.4.2
 - SDL2 v2.0.8+
-- Movidius NCS SDK (optional)
 
 The following OS features must be enabled:
 
@@ -43,7 +41,7 @@ You will also need to update the kernel on the Raspbian Pi to v4.14+
 - To transfer your code to the car, compile it on the car, and then run it:
     ./runner.sh hello 192.168.1.42
 
-This copies the code to the Raspberry Pi, compiles it on the Pi, and then executes it.
+This copies the code to the BBlue, compiles it on the BBlue, and then executes it.
 
 ## Future workflow
 
